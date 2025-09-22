@@ -1,0 +1,15 @@
+# venvs
+.venv/
+venv/
+lab_01/
+# caches
+__pycache__/
+.pytest_cache/
+# OS/editor
+.DS_Store
+.vscode/
+# build
+dist/
+*.egg-info/
+# data outputs
+data/*
