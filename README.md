@@ -10,3 +10,7 @@ pip install -r requirements.txt
 pytest -q
 python -m unittest discover -s test -p "test_unittest.py" -v
 ```
+## Labs
+- [Lab 1 – Text Utils](MLOps/Lab1/README.md)
+- [Lab 2 – GH Actions Retrain & Versioning](MLOps/Lab2/README.md)
+
