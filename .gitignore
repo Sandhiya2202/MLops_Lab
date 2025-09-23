@@ -13,3 +13,5 @@ dist/
 *.egg-info/
 # data outputs
 data/*
+MLOps/Lab2/models/
+MLOps/Lab2/metrics/
