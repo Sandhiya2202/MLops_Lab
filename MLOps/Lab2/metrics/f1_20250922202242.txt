@@ -1,2 +1,0 @@
-F1 Score: 1.0000
-Model: model_20250922202242.joblib
