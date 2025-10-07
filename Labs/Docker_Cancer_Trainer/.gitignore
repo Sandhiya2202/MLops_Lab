@@ -1,0 +1,12 @@
+artifacts/
+data/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.DS_Store
+*.pkl
+*.png
+*.json
+*.txt
+.ipynb_checkpoints/
