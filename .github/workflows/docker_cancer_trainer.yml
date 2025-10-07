@@ -1,0 +1,33 @@
+name: Docker Cancer Trainer (scoped)
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'Labs/Docker_Cancer_Trainer/**'
+  pull_request:
+    branches: [ "main" ]
+    paths:
+      - 'Labs/Docker_Cancer_Trainer/**'
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install lab requirements
+        run: pip install -r Labs/Docker_Cancer_Trainer/requirements.txt
+
+      - name: Smoke test (imports only)
+        run: python - <<'PY'
+from sklearn.ensemble import RandomForestClassifier
+import joblib, json
+print("✅ Imports OK for Docker Cancer Trainer")
+PY
