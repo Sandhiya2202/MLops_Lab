@@ -11,3 +11,4 @@ docker build -t cancer-train:1.0 .
 mkdir -p artifacts
 docker run --rm -v "$PWD/artifacts:/app/artifacts" cancer-train:1.0
 
+- CI test: Mon Oct  6 20:30:38 EDT 2025
