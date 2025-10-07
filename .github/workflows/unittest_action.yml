@@ -1,5 +1,14 @@
 name: Python Unittests
-on: { push: { branches: ["main"] }, pull_request: { branches: ["main"] } }
+on:
+  push:
+    branches: ["main"]
+    paths-ignore:
+      - 'Labs/Docker_Cancer_Trainer/**'
+  pull_request:
+    branches: ["main"]
+    paths-ignore:
+      - 'Labs/Docker_Cancer_Trainer/**'
+
 jobs:
   build:
     runs-on: ubuntu-latest
