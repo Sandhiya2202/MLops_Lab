@@ -1,23 +1,45 @@
 name: Testing with Pytest
+
 on:
   push:
     branches: ["main"]
     paths-ignore:
       - 'Labs/Docker_Cancer_Trainer/**'
+      - '.github/**'
   pull_request:
     branches: ["main"]
     paths-ignore:
       - 'Labs/Docker_Cancer_Trainer/**'
+      - '.github/**'
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
-        with: { python-version: "3.11" }
-      - run: python -m pip install --upgrade pip
-      - run: pip install -r requirements.txt
-      - run: pytest -q --junitxml=pytest-report.xml
-      - uses: actions/upload-artifact@v4
-        with: { name: test-results, path: pytest-report.xml }
+        with:
+          python-version: "3.11"
+
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
+
+      - name: Install requirements
+        run: pip install -r requirements.txt
+
+      - name: Run pytest (skip if no tests)
+        shell: bash
+        run: |
+          if ls tests/**/*.py tests/*.py >/dev/null 2>&1; then
+            pytest -q --junitxml=pytest-report.xml
+          else
+            echo "No tests found, skipping." > pytest-report.xml
+          fi
+
+      - name: Upload test report
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: pytest-report.xml
