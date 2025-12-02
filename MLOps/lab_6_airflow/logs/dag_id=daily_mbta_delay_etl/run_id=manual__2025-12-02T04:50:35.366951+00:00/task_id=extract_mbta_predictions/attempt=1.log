@@ -1,0 +1,20 @@
+[2025-12-02T04:50:37.180+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-12-02T04:50:37.184+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: daily_mbta_delay_etl.extract_mbta_predictions manual__2025-12-02T04:50:35.366951+00:00 [queued]>
+[2025-12-02T04:50:37.187+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: daily_mbta_delay_etl.extract_mbta_predictions manual__2025-12-02T04:50:35.366951+00:00 [queued]>
+[2025-12-02T04:50:37.187+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 3
+[2025-12-02T04:50:37.190+0000] {taskinstance.py:2879} INFO - Executing <Task(_PythonDecoratedOperator): extract_mbta_predictions> on 2025-12-02 04:50:35.366951+00:00
+[2025-12-02T04:50:37.192+0000] {standard_task_runner.py:72} INFO - Started process 188 to run task
+[2025-12-02T04:50:37.193+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'daily_mbta_delay_etl', 'extract_mbta_predictions', 'manual__2025-12-02T04:50:35.366951+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/daily_mbta_delay_etl.py', '--cfg-path', '/tmp/tmpgu4x6_3p']
+[2025-12-02T04:50:37.194+0000] {standard_task_runner.py:105} INFO - Job 15: Subtask extract_mbta_predictions
+[2025-12-02T04:50:37.198+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.11/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-12-02T04:50:37.208+0000] {task_command.py:467} INFO - Running <TaskInstance: daily_mbta_delay_etl.extract_mbta_predictions manual__2025-12-02T04:50:35.366951+00:00 [running]> on host d62b3a9d7e94
+[2025-12-02T04:50:37.228+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='student' AIRFLOW_CTX_DAG_ID='daily_mbta_delay_etl' AIRFLOW_CTX_TASK_ID='extract_mbta_predictions' AIRFLOW_CTX_EXECUTION_DATE='2025-12-02T04:50:35.366951+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-02T04:50:35.366951+00:00'
+[2025-12-02T04:50:37.229+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-12-02T04:50:37.230+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.11/site-packages/***/utils/operator_helpers.py:175 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2025-12-02T04:50:37.368+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.11/site-packages/urllib3/connectionpool.py:1099 InsecureRequestWarning: Unverified HTTPS request is being made to host 'api-v3.mbta.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+[2025-12-02T04:50:37.410+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/data/raw/mbta_predictions_2025-12-02 04:50:35.366951+00:00.json
+[2025-12-02T04:50:37.420+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-12-02T04:50:37.420+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=daily_mbta_delay_etl, task_id=extract_mbta_predictions, run_id=manual__2025-12-02T04:50:35.366951+00:00, execution_date=20251202T045035, start_date=20251202T045037, end_date=20251202T045037
+[2025-12-02T04:50:37.457+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2025-12-02T04:50:37.470+0000] {taskinstance.py:3891} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-12-02T04:50:37.471+0000] {local_task_job_runner.py:240} INFO - ::endgroup::

@@ -1,0 +1,19 @@
+[2025-12-02T04:50:38.247+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-12-02T04:50:38.252+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: daily_mbta_delay_etl.transform_mbta_data manual__2025-12-02T04:50:35.366951+00:00 [queued]>
+[2025-12-02T04:50:38.254+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: daily_mbta_delay_etl.transform_mbta_data manual__2025-12-02T04:50:35.366951+00:00 [queued]>
+[2025-12-02T04:50:38.254+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 3
+[2025-12-02T04:50:38.257+0000] {taskinstance.py:2879} INFO - Executing <Task(_PythonDecoratedOperator): transform_mbta_data> on 2025-12-02 04:50:35.366951+00:00
+[2025-12-02T04:50:38.259+0000] {standard_task_runner.py:72} INFO - Started process 192 to run task
+[2025-12-02T04:50:38.260+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'daily_mbta_delay_etl', 'transform_mbta_data', 'manual__2025-12-02T04:50:35.366951+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/daily_mbta_delay_etl.py', '--cfg-path', '/tmp/tmpxd3z8e9d']
+[2025-12-02T04:50:38.261+0000] {standard_task_runner.py:105} INFO - Job 16: Subtask transform_mbta_data
+[2025-12-02T04:50:38.266+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.11/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-12-02T04:50:38.275+0000] {task_command.py:467} INFO - Running <TaskInstance: daily_mbta_delay_etl.transform_mbta_data manual__2025-12-02T04:50:35.366951+00:00 [running]> on host d62b3a9d7e94
+[2025-12-02T04:50:38.297+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='student' AIRFLOW_CTX_DAG_ID='daily_mbta_delay_etl' AIRFLOW_CTX_TASK_ID='transform_mbta_data' AIRFLOW_CTX_EXECUTION_DATE='2025-12-02T04:50:35.366951+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-02T04:50:35.366951+00:00'
+[2025-12-02T04:50:38.298+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-12-02T04:50:38.299+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.11/site-packages/***/utils/operator_helpers.py:175 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2025-12-02T04:50:38.302+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/data/clean/mbta_delays_2025-12-02 04:50:35.366951+00:00.csv
+[2025-12-02T04:50:38.308+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-12-02T04:50:38.308+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=daily_mbta_delay_etl, task_id=transform_mbta_data, run_id=manual__2025-12-02T04:50:35.366951+00:00, execution_date=20251202T045035, start_date=20251202T045038, end_date=20251202T045038
+[2025-12-02T04:50:38.319+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2025-12-02T04:50:38.328+0000] {taskinstance.py:3891} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-12-02T04:50:38.328+0000] {local_task_job_runner.py:240} INFO - ::endgroup::
