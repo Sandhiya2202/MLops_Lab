@@ -1,5 +1,5 @@
 
-# Lab 3 – Feature Selection (MLOps)
+# Lab 4 – Feature Selection (MLOps)
 
 This lab demonstrates how to apply multiple **feature selection techniques** on a classification dataset using **scikit-learn**.  
 You will explore how different subsets of features affect model performance and compare evaluation metrics such as **Accuracy, ROC-AUC, Precision, Recall, and F1 Score**.
@@ -11,7 +11,7 @@ The dataset used is the **Breast Cancer Wisconsin Diagnostic dataset**, exported
 ## 📂 Folder Structure
 
 ```text
-lab_3/
+lab4/
 ├── data/
 │   └── breast_cancer_lab3.csv        # Dataset generated using sklearn
 │
